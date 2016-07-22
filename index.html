@@ -1,0 +1,277 @@
+<head>
+<title>Pondering a best-in-class native mobile app for news and media companies</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<style type="text/css">
+  body{
+    text-align: center;
+  }
+  .container{
+    text-align: left;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 85px;
+    margin-bottom: 85px;
+  }
+  h1 {
+    font-family: "Open Sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    margin-left: -1.8px;
+    line-height: 1.2;
+    margin-top: 0px;
+    margin-bottom: 4px;
+  }
+  h2 {
+    font-family: "Open Sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 32px;
+    margin-left: -1.8px;
+    line-height: 1.2;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,.44);
+    clear: both;
+  }
+
+  p, li {
+    font-family: "Lora",Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.5;
+    color: rgba(0,0,0,0.8);
+    -webkit-font-smoothing: antialiased;
+  }
+  a, a:visited {
+    color: black;
+    text-decoration: underline;
+  }
+  li {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  hr {
+    width: 100px;
+    border: 0;
+    margin: 50px auto;
+    border-top: 1px solid rgba(0,0,0,.15);
+  }
+
+  .vid-container {
+    width: 360px;
+    height: 640px;
+    float: left;
+    margin-left: -30px;
+    margin-bottom: 60px;
+    margin-right: 40px;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .vid-container::after{
+    position: absolute;
+    top: 0;
+    content: "\25ba \A Hover to play";
+    left: 0;
+    white-space: pre;
+    line-height: 1.3;
+    pointer-events: none;
+    width : 100%;
+    padding-top: 300px;
+    box-sizing: border-box;
+    font-size: 1.8em;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    z-index: 1;
+    background: rgba(0,0,0,.75);
+    -webkit-transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
+    height: 100%;
+    text-align: center;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .vid-container:hover::after{
+    opacity: 0;
+  }
+
+  .appendix img {
+    float: left;
+  }
+
+  .appendix p {
+    margin-left: 130px;
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: 40px;
+  }
+
+  .appendix h4 {
+    font-family: "Open Sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+    font-size: 18px;
+    margin-left: 130px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+  }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+
+
+
+<h1>Pondering a best-in-class native mobile app for news and media companies</h1>
+
+<p>
+This project took place in mid 2015 as a collaboration between myself and two friends, Connor Zwick and Colton Gyulay. Connor and I were responsible for interface design (Sketch) and animations (Quartz Composer) while Colton worked on implementing the app (Swift/XCode). 
+</p>
+
+<p>We were interested in making a cutting-edge mobile experience far more accessible for media companies. We created a mockup of an imagined Vox app to showcase one example of a properly translated-to-mobile experience, and described our thought process around the need for native apps.</p>
+
+<p>Please note that we chose Vox as one example of an interesting media organization with a ton of currently unmet potential for mobile. We are not currently communicating with them and as such, this entire mockup was created using only publicly available information.</p>
+
+
+
+<hr>
+
+
+<h1>Our Concept</h1>
+
+<p>Our main design goal was to create a highly intuitive way to read Vox. Generally, the visual elements should melt away in the reader&#39;s mind, letting the content speak for itself. The reader shouldn&#39;t have to think about how to do something&#8202;-&#8202;it should come naturally. We&#39;ve enumerated more detailed design principles after the visual presentation.</p>
+
+<p>Most of the screenshots below are directly recorded from the app.</p>
+
+<h2>Personalized Feed</h2>
+<div class="vid-container">
+<video preload="auto" muted="" width="360" height="640" loop class="box">
+      <source src="videos/home-screen.mp4">
+</video>
+</div>
+
+
+<p>The home feed is elegantly simple and immersive. It&#39;s just a stream of stories and topic collections. Rather than default scrolling behavior, we&#39;ve implemented a more intuitive behavior: a gentle swipe gently snaps you to the next story and a stronger swipe zips you efficiently down the page.</p>
+
+<p>To keep things simple, there are only two options beyond opening a story: search and explore&#8202;-&#8202;which we&#39;ll talk more about further down.</p>
+
+<h2>Reading an Article</h2>
+
+<div class="vid-container"><video preload="auto" muted="" width="360" height="640" loop class="box">
+      <source src="videos/story.mp4">
+</video>
+</div>
+
+
+<p>When a reader taps a story, the app fluidly transitions to provide a sense of context. The story image is preserved and used as a striking header which collapses as you scroll.</p>
+
+<p>Readers can bookmark an articles to collect their favorites or build up a reading queue.</p>
+
+<p>The share button floats at the bottom as a subtle, but omnipresent, cue to share.</p>
+
+<p>When a reader finishes an article, they are reminded again to share as well as recommended additional articles to read.</p>
+
+<h2>Search and Explore</h2>
+
+<div class="vid-container"><video preload="auto" muted="" width="360" height="640" loop class="box">
+      <source src="videos/search-explore.mp4">
+</video>
+</div>
+
+<p>Search allows you to look up a particular article while Explore is how you do something specific like exploring a specific topic or content type.</p>
+
+<p>Both views subtly appear over a blurred out feed and maintain the reader&#39;s position in the feed.</p>
+
+<p>By streamlining the design to only those two options, we were able to avoid using a tab bar at the bottom or, even worse, a hamburger menu (yuck!) and keep the app slim and focused.</p>
+
+<h2>Viewing Cards</h2>
+
+<div class="vid-container"><video preload="auto" muted="" width="360" height="640" loop class="box">
+      <source src="videos/card.mp4">
+</video>
+</div>
+
+<p>Cards are a distinct part of the Vox Experience so we wanted to make them a first class citizen on mobile.</p>
+
+<p>Tap a card anywhere in the app to start exploring the entire deck right where you are. Moving cards around are playful/light and encourage exploration.</p>
+
+<p>Once the reader has finished exploring a deck, it&#39;s super easy to dismiss the cards and return to wherever they were previously.</p>
+
+<h2>Design Principles</h2>
+
+
+<p>When designing interfaces, there are several design pillars we adhere to:</p>
+
+<ul>
+<li>Continuity: As the reader moves between states of the application, transitions and gestures should focus attention and maintain continuity.</li>
+<li>Aesthetic Integrity: People browse Vox to stay up to date with the world around them; the aesthetic should convey this function coherently.</li>
+<li>Consistency: Combining contemporary mobile design language with the Vox aesthetic provides a familiar yet distinct experience that sets a new standard for future apps in this category. In addition, the same action at any point in the app should have a consistent result.</li>
+<li>Direct Manipulation: The app should be a surface that one can directly manipulate. The user should get immediate feedback when touching the screen just like they would with physical material.</li>
+<li>Metaphors: Unlike skeuomorphism, metaphors (especially in motion) can provide an instantly intuitive and delightful experience. The entire app uses layers as a metaphor to provide context and understanding. For example, articles are revealed underneath their header image directly in the home feed and that depth is conveyed by the subtle parallax as a user moves the feed.</li>
+
+</ul>
+<hr>
+
+<h1>Why a native app is so important</h1>
+<p>Why is having a native app so important? There are four reasons: reader preference, engagement, brand, and virality.</p>
+
+<h2>Reader Preference </h2>
+
+
+<p>People strongly prefer using native apps over mobile websites for tasks they do more than once. The data speaks for itself: the average US consumer spends over 2 hours and 19 minutes/day in native apps compared to just 22 minutes/day in their mobile browser. Mobile browser time has dropped 30% in the past year alone&#8202;-&#8202;if people anticipate doing something more than once, they download an app.</p>
+
+<p>When they do this for news, you want them to go to your app - not a third party aggregator where your content is displayed alongside articles from fifteen other publications.</p>
+
+<h2>Engagement </h2>
+
+
+<p>People engage more often and more consistently with native apps than a mobile website. This is because native apps offer a fundamentally smoother and better experience in many ways:</p>
+
+<ol>
+<li>On the web, a news page can take several seconds to download and display the over 1MB of resources (CSS, JS, etc) necessary. During this time, impatient readers are leaving and getting their news elsewhere. A native app can preload resources and give readers the illusion of instant loading.</li>
+<li>Native apps have much better performance, enabling buttery smooth scrolling and seamless transitions between content for a delightful experience that keeps the reader coming back.</li>
+<li>Native apps are far more likely to sit on the homescreen&#8202;-&#8202;the only way to get a user to religiously visit something every few hours.</li>
+<li>Push notifications to re-engage readers are only possible with native apps. They can be very powerful&#8202;-&#8202;imagine sending a notification when a storystream is updated.</li>
+<li>A native app can improve CTRs by learning the reader&#39;s interests and showing them the most relevant article next to keep them in the app and reading.</li>
+</ol>
+
+<h2>Brand </h2>
+
+
+<p>An exceptionally polished app is an opportunity to showcase and control your brand&#39;s presence. It will command a strong presence in the App Store (possibly getting featured by Apple), serve as a perpetual fountain of new users, and distinguish itself as best-in-class.</p>
+
+<p>Many of the best media brands have an app that gets featured (Washington Post, Buzzfeed, CNN, Yahoo Digest, etc) but almost none have an exceptional one.</p>
+
+<h2>Virality </h2>
+
+
+<p>Everyone we know discovers and reads news articles through Facebook and Twitter&#8202;-&#8202;us included. A native app can extend this social media reach and increase virality and sharing because mobile users are typically logged into social accounts at the system level and are used to sending messages on mobile.</p>
+
+<p>It also enables users to intentionally browse instead of only passively reading articles that pop up in their feeds. Occasional readers turn into daily readers.</p>
+<hr>
+
+
+
+
+</div>
+<script>
+$("video").mouseenter(function(){
+  $(this).get(0).play();
+});
+$("video").mouseleave(function(){
+  $(this).get(0).pause();
+});
+</script>
+
+</body>
